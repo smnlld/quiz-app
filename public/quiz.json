@@ -1,112 +1,112 @@
 [
     {
         "id": "01",
-        "question" : "Which of the following is the correct name of React.js?",
+        "question" : "Who is the National Hero of the Philippines?",
         "options": [
-            "React",
-            "React.js",
-            "ReactJS",
-            "All of the above"
+            "Jose Rizal",
+            "Emillio Aguinaldo",
+            "Simon Ullado",
+            "None of the Above"
         ],
-        "answer": "All of the above"
+        "answer": "Jose Rizal"
     },
     {
         "id": "02",
-        "question" : "Which of the following are the advantages of React.js?",
+        "question" : "Who is the current President of the Philippines?",
         "options": [
-            "React.js can increase the application's performance with Virtual DOM.",
-            "React.js is easy to integrate with other frameworks such as Angular, BackboneJS since it is only a view library.",
-            "React.js can render both on client and server side.",
-            "All of the above"
+            "Leni Robredo",
+            "Bongbong Marcos",
+            "Ninoy Aquino",
+            "Rodrigo Duterte"
         ],
-        "answer": "All of the above"
+        "answer": "Bongbong Marcos"
     },
     {
         "id": "03",
-        "question" : "Which of the following is not a disadvantage of React.js?",
+        "question" : "What is the Primary Religion in the Philippines ",
         "options": [
-            "React.js has only a view layer. We have put your code for Ajax requests, events and so on.",
-            "The library of React.js is pretty large.",
-            "The JSX in React.js makes code easy to read and write.",
-            "The learning curve can be steep in React.js."
+            "Roman Catholic",
+            "Iglesia ni Cristo",
+            "Born Again",
+            "Christian"
         ],
-        "answer": "The JSX in React.js makes code easy to read and write."
+        "answer": "Christian"
     },
     {
         "id": "04",
-        "question" : "Which of the following command is used to install create-react-app?",
+        "question" : "What is the stone-fruit that is national fruit of Philippines?",
         "options": [
-            "npm install -g create-react-app",
-            "npx create-react-app my-app",
-            "npm install create-react-app",
-            "npm install -f create-react-app"
+            "Tomato",
+            "Jack Fruit",
+            "Mango",
+            "Banana"
         ],
-        "answer": "npx create-react-app my-app"
+        "answer": "Mango"
     },
     {
         "id": "05",
-        "question" : "What of the following is used in React.js to increase performance?",
+        "question" : "What country in Southeast Asia that is name after a Spanish Monarch?",
         "options": [
-            "Original DOM",
-            "Virtual DOM",
-            "Both A and B.",
+            "China",
+            "Japan",
+            "Philippines",
             "None of the above."
         ],
-        "answer": "Virtual DOM"
+        "answer": "Philippines"
     },
     {
         "id": "06",
-        "question" : "What is the default port where webpack-server runs?",
+        "question" : "What is the biggest city in the Philippines",
         "options": [
-            "3000",
-            "8080",
-            "3030",
-            "6060"
+            "Manila",
+            "Davao",
+            "Marikina",
+            "Quzon City"
         ],
-        "answer": "3000"
+        "answer": "Manila"
     },
     {
         "id": "07",
-        "question" : "How many numbers of elements a valid react component can return?",
+        "question" : "What is the National Language of the Philippines?",
         "options": [
-            "1",
-            "2",
-            "3",
-            "Unlimited"
+            "English",
+            "Bisaya",
+            "Conyo",
+            "Filipino"
         ],
-        "answer": "1"
+        "answer": "Filipino"
     },
     {
         "id": "08",
-        "question" : "What is the declarative way to render a dynamic list of components based on values in an array?",
+        "question" : "What does the National Anthem of the Philippines?",
         "options": [
-            "Using the reduce array method",
-            "Using the <Each /> component",
-            "Using the Array.map() method",
-            "With a for/while loop"
+            "Bayang Magiliw",
+            "Lupang Hinirang",
+            "Peras ng Silanganan",
+            "Bahay Kubo"
         ],
-        "answer": "Using the Array.map() method"
+        "answer": "Lupang Hinirang"
     },
     {
         "id": "09",
-        "question" : "What is a state in React?",
+        "question" : "Hottest City in the Philippines?",
         "options": [
-            "A permanent storage.",
-            "Internal storage of the component.",
-            "External storage of the component.",
-            "None of the above."
+            "Everywhere",
+            "Manila",
+            "Dagupan",
+            "Quezon"
         ],
-        "answer": "Internal storage of the component."
+        "answer": "Dagupan"
     },
     {
         "id": "10",
-        "question" : "What are the two ways to handle data in React?",
+        "question" : "What is the official motto of the Philippines",
         "options": [
-            "State & Props",
-            "Services & Components",
-            "State & Services",
-            "State & Component"
+            "For God, People, Nature and Country",
+            "Time is Gold",
+            "Roses are red",
+            "None of the Above"
         ],
-        "answer": "State & Props"
+        "answer": "For God, People, Nature and Country"
     }
 ]

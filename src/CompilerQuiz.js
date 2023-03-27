@@ -3,8 +3,8 @@ import Start from "./components/Start";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
 
-function App1() {
-  // All Quizs, Current Question, Index of Current Question, Answer, Selected Answer, Total Marks
+const CompilerQuiz = (props) => {
+  //this one will handle all the state regarding the quiz
   const [quizs, setQuizs] = useState([]);
   const [question, setQuesion] = useState({});
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -13,12 +13,28 @@ function App1() {
   const [marks, setMarks] = useState(0);
   const [username, setUsername] = useState("");
 
-  // Display Controlling States
+
+  //to close and open parts of the quiz
   const [showStart, setShowStart] = useState(true);
   const [showQuiz, setShowQuiz] = useState(false);
   const [showResult, setShowResult] = useState(false);
 
-  // Load JSON Data
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value);
+  };
+
+  const handleStartQuiz = (event) => {
+    event.preventDefault();
+    if (username !== "") {
+      const startQuiz = () => {
+        setShowStart(false);
+        setShowQuiz(true);
+      };
+      startQuiz();
+    }
+  };
+
+  //fetcher of the data from Quiz.json
   useEffect(() => {
     fetch("quiz.json")
       .then((res) => res.json())
@@ -29,7 +45,7 @@ function App1() {
         setQuizs(splicedShuffledQuestion);
       });
   }, []);
-//fisher-yates shuffle algo
+  //Try to shuffle the question from json to array (fisher-yate algo)
   const shuffle = (array) => {
     let currentIndex = array.length,
       randomIndex;
@@ -48,35 +64,23 @@ function App1() {
     }
     return array;
   };
-  //const shuffledQuestions = questions.sort(() => 0.5 - Math.random());
-  // const selectedQuestions = shuffledQuestions.slice(0, 5);
-  // setQuizQuestions(selectedQuestions);
 
-  // Set a Single Question
+  //pick 1 question from the shuffled 
   useEffect(() => {
     if (quizs.length > questionIndex) {
       setQuesion(quizs[questionIndex]);
     }
   }, [quizs, questionIndex]);
 
-  // Start Quiz
-  const startQuiz = () => {
-    setShowStart(false);
-    setShowQuiz(true);
-  };
-
-  // Check Answer
+  //this will get the score of the user if its correct will plus  1 in mark
   const checkAnswer = (event, selected) => {
     if (!selectedAnswer) {
       setCorrectAnswer(question.answer);
       setSelectedAnswer(selected);
 
       if (selected === question.answer) {
-        event.target.classList.add("bg-success");
-        setMarks(marks + 5);
-      } else {
-        event.target.classList.add("bg-danger");
-      }
+        setMarks(marks + 1);
+      } 
     }
   };
 
@@ -84,10 +88,6 @@ function App1() {
   const nextQuestion = () => {
     setCorrectAnswer("");
     setSelectedAnswer("");
-    const wrongBtn = document.querySelector("button.bg-danger");
-    wrongBtn?.classList.remove("bg-danger");
-    const rightBtn = document.querySelector("button.bg-success");
-    rightBtn?.classList.remove("bg-success");
     setQuestionIndex(questionIndex + 1);
   };
 
@@ -107,18 +107,16 @@ function App1() {
     setSelectedAnswer("");
     setQuestionIndex(0);
     setMarks(0);
-    const wrongBtn = document.querySelector("button.bg-danger");
-    wrongBtn?.classList.remove("bg-danger");
-    const rightBtn = document.querySelector("button.bg-success");
-    rightBtn?.classList.remove("bg-success");
   };
 
   return (
     <>
-      {/* Welcome Page */}
-      <Start startQuiz={startQuiz} showStart={showStart} />
-
-      {/* Quiz Page */}
+      <Start
+        showStart={showStart}
+        username={username}
+        onUsernameChange={handleUsernameChange}
+        onStartQuiz={handleStartQuiz}
+      />
       <Quiz
         showQuiz={showQuiz}
         question={question}
@@ -130,9 +128,9 @@ function App1() {
         nextQuestion={nextQuestion}
         showTheResult={showTheResult}
       />
-
-      {/* Result Page */}
       <Result
+        username={username}
+        selectedAnswer={selectedAnswer}
         showResult={showResult}
         quizs={quizs}
         marks={marks}
@@ -140,7 +138,7 @@ function App1() {
       />
     </>
   );
-}
+};
 
-export default App1;
-
+export default CompilerQuiz;
+ 
