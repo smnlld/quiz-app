@@ -17,8 +17,13 @@ export const App = () => {
 
   return (
     <Router>
+      <div>
+            <strong> QUIZ APP</strong>
+            <p>by: Simon Ullado</p>
+          </div>
       <Switch>
         <Route exact path="/">
+          
           <Home 
             onStartQuiz={handleStartQuiz}
           />
