@@ -18,11 +18,11 @@ export const App = () => {
     <Router>
       <div className="h-screen bg-[#F7F1E5] overflow-auto">
         <div>
-          <div className=" bg-[#E7B10A] flex flex-col relative items-center py-20 justify-center my-20 h-[100px]">
-            <div className="text-8xl">
+          <div className=" bg-[#E7B10A] flex flex-col relative items-center py-20 text-[#4C4B16] justify-center my-20 h-[100px]">
+            <div className="text-8xl font-mono">
               <strong> QUIZ APP</strong>
             </div>
-            <div className="text-2xl">
+            <div className="text-2xl font-mono">
               <p>by: Simon Ullado</p>
             </div>
           </div>
