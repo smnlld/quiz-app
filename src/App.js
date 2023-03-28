@@ -16,22 +16,24 @@ export const App = () => {
 
   return (
     <Router>
-      <div>
-        <div className="flex flex-col relative items-center justify-center my-20 h-[100px]">
-          <div className="text-8xl">
-            <strong> QUIZ APP</strong>
-          </div>
-          <div className="text-2xl">
-          <p>by: Simon Ullado</p>
+      <div className="h-screen bg-[#F7F1E5] overflow-auto">
+        <div>
+          <div className="flex flex-col relative items-center justify-center my-20 h-[100px]">
+            <div className="text-8xl">
+              <strong> QUIZ APP</strong>
+            </div>
+            <div className="text-2xl">
+              <p>by: Simon Ullado</p>
+            </div>
           </div>
         </div>
+        <Switch>
+          <Route exact path="/">
+            <Home onStartQuiz={handleStartQuiz} />
+          </Route>
+          <Route path="/quiz" render={() => <Quiz />} />
+        </Switch>
       </div>
-      <Switch>
-        <Route exact path="/">
-          <Home onStartQuiz={handleStartQuiz} />
-        </Route>
-        <Route path="/quiz" render={() => <Quiz />} />
-      </Switch>
     </Router>
   );
 };
