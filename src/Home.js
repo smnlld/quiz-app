@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = ({ username, onUsernameChange, onStartQuiz }) => {
   return (
-    <div className="flex justify-center items-center h-screen" >
+    <div className="flex flex-col relative justify-center items-center h-[500px]" >
       <div className="border-8 border-double px-20 py-20 justify-center item-center">
         <button
           onClick={onStartQuiz}

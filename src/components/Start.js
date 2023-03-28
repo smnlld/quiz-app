@@ -3,7 +3,7 @@ import React from 'react';
 const Start = ({ showStart, username, onUsernameChange, onStartQuiz }) => {
     return (
         <div style={{ display: `${showStart ? 'block' : 'none'}`}}>
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex flex-col relative justify-center items-center h-[500px]z">
         <div className='border-8 border-double px-20 py-20 justify-center item-center'>
         <form onSubmit={onStartQuiz}>
         <label className='mx-4 font-sans text-lg font-bold'>

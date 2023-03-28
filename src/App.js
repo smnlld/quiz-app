@@ -11,25 +11,26 @@ export const App = () => {
 
   const handleStartQuiz = (event) => {
     event.preventDefault();
-      window.location.href = "/quiz";
-    
+    window.location.href = "/quiz";
   };
 
   return (
     <Router>
       <div>
+        <div className="flex flex-col relative items-center justify-center my-20 h-[100px]">
+          <div className="text-8xl">
             <strong> QUIZ APP</strong>
-            <p>by: Simon Ullado</p>
           </div>
+          <div className="text-2xl">
+          <p>by: Simon Ullado</p>
+          </div>
+        </div>
+      </div>
       <Switch>
         <Route exact path="/">
-          
-          <Home 
-            onStartQuiz={handleStartQuiz}
-          />
+          <Home onStartQuiz={handleStartQuiz} />
         </Route>
-        <Route  path="/quiz"
-        render={() => <Quiz />}/>
+        <Route path="/quiz" render={() => <Quiz />} />
       </Switch>
     </Router>
   );
