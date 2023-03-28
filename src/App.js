@@ -18,7 +18,7 @@ export const App = () => {
     <Router>
       <div className="h-screen bg-[#F7F1E5] overflow-auto">
         <div>
-          <div className="flex flex-col relative items-center justify-center my-20 h-[100px]">
+          <div className=" bg-[#E7B10A] flex flex-col relative items-center py-20 justify-center my-20 h-[100px]">
             <div className="text-8xl">
               <strong> QUIZ APP</strong>
             </div>

@@ -130,7 +130,6 @@ const CompilerQuiz = (props) => {
       />
       <Result
         username={username}
-        selectedAnswer={selectedAnswer}
         showResult={showResult}
         quizs={quizs}
         marks={marks}
